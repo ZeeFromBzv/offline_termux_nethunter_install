@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+cd ~
+
+wget https://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
+
+chmod +x kali-archive-keyring_2020.2_all.deb && mv kali-archive-keyring_2020.2_all.deb kali-arm64/root
