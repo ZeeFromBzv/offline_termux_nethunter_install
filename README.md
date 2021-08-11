@@ -22,14 +22,26 @@ So, follow the steps to install nethunter in termux...
      cd ~
 
 2) install wget ; proot ; tar
+#update apt
 
+        apt update
 
-        apt update && apt install wget && apt install proot && apt install tar
+#install wget
+
+     apt install wget 
+
+#install proot 
+
+     apt install proot 
+
+#install tar
+
+     apt install tar
 
 
 3) download a minimal nethunter image depending on your arch
 
-  #to see the arch
+  #verify your arch
 
      uname -m
 
@@ -95,7 +107,13 @@ or
 
 11) add root and kali to the sudoers
 
-        echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers && echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
+#add root
+
+     echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers 
+
+#add kali
+
+     echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
 
 12) exit from nethunter
 
@@ -115,4 +133,8 @@ or
 
 #gnome
 
-     sudo apt install install kali-desktop-gnome && sudo apt remove
+     sudo apt install kali-desktop-gnome
+
+and
+
+     sudo apt-get remove gnome-power-manager
