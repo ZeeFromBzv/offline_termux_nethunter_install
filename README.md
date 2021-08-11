@@ -8,11 +8,11 @@ So, follow the steps bellow to install nethunter in termux
 1) open termux and make sure you are in the home directory
   #verify
 
-    pwd
+     pwd
 
   #go to the home directory
 
-    cd ~
+     cd ~
 
 2) install wget ; proot ; tar
 
