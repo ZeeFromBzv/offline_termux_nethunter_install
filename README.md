@@ -6,6 +6,7 @@ this is a set of little scipts helping to install the minimal package of nethunt
 So, follow the steps bellow to install nethunter in termux
 
 1) open termux and make sure you are in the home directory
+
   #verify
 
      pwd
