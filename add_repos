@@ -1,0 +1,23 @@
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+function get_arch() {
+    case $(getprop ro.product.cpu.abi) in
+        arm64-v8a)
+            SYS_ARCH=arm64
+            ;;
+        armeabi|armeabi-v7a)
+            SYS_ARCH=armhf
+            ;;
+        *)
+            unsupported_arch
+            ;;
+    esac
+}
+get_arch
+CHROOT=kali-${SYS_ARCH}
+
+cd ~
+
+wget https://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
+
+chmod +x kali-archive-keyring_2020.2_all.deb && mv kali-archive-keyring_2020.2_all.deb $CHROOT/root
