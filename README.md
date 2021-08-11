@@ -17,6 +17,7 @@ So, follow the steps bellow to install nethunter in termux
 
 2) install wget ; proot ; tar
 
+
      apt update && apt install wget && apt install proot && apt install tar
 
 
