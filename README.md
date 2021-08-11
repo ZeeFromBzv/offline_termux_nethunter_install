@@ -18,25 +18,25 @@ So, follow the steps bellow to install nethunter in termux
 2) install wget ; proot ; tar
 
 
-      apt update
-      apt install wget
-      apt install proot
-      apt install tar
+        apt update
+        apt install wget
+        apt install proot
+        apt install tar
 
 
 3) download a minimal nethunter image depending on your arch
 
   #to see the arch
 
-uname -m
+     uname -m
 
   #for armf
 
-wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
+     wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
   
   #for arm64
 
-wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
+     wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
 
   #unknown archs are not supported
 
