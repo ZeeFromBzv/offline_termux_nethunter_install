@@ -1,9 +1,13 @@
-#local_termux_nethunter_install
-user=kali (to use custom users, you'll need to modify the login scripts)
+#offline_termux_nethunter_install<br><br>
+user=kali (to use custom users, you'll need to modify the login scripts)<br>
+warning: the offline in my offline_termux_nethunter_install is for
+the downloaded minimal nethunter package<br> you'll to be online to do this settings fully
 
-this is a set of little scipts helping to install the minimal package of nethunter in termux
 
-So, follow the steps bellow to install nethunter in termux
+this is a set of little scipts helping to install the minimal package of nethunter in termux<br>
+the instructions bellow help to install nethunter from it's minimal package (obvious)<br><br>
+
+So, follow the steps to install nethunter in termux...
 
 1) open termux and make sure you are in the home directory
 
