@@ -49,7 +49,7 @@ So, follow the steps bellow to install nethunter in termux
 
 5) execute the localinstall script
 
-     ./localinstall
+       ./localinstall
 
 6) download the add_repos script and add permission
 
@@ -63,9 +63,11 @@ So, follow the steps bellow to install nethunter in termux
 
 7) execute the add_repos scrip
 
-     ./add_repos
+        ./add_repos
 
 8) start nethunter (it'll start as root)
+
+by
 
      nethunter
 
@@ -75,34 +77,36 @@ or
 
 9) install the repositories and update apt
 
-     apt install ./kali-archive-keyring_2020.2_all.deb && apt update
+        apt install ./kali-archive-keyring_2020.2_all.deb && apt update
 
 10) install sudo
 
-     apt install sudo
+        apt install sudo
 
 11) add kali user
 
-     adduser kali
+        adduser kali
 
 11) add root and kali to the sudoers
 
-     echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers && echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
+        echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers && echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
 
 12) exit from nethunter
 
-     exit
+        exit
 
 13) start nethunter (you should now be logged as kali)
 
-     nethunter
+by        
+
+      nethunter
 
 or
 
-     nh
+      nh
 
 14) install a desktop enviroment depending on your preferences and remove it's power manager plugins
 
 #gnome
 
-sudo apt install install kali-desktop-gnome && sudo apt remove
+     sudo apt install install kali-desktop-gnome && sudo apt remove
