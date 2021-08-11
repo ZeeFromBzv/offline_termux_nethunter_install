@@ -1,7 +1,7 @@
 #offline_termux_nethunter_install<br><br>
 user=kali (to use custom users, you'll need to modify the login scripts)<br>
 warning: the offline in my offline_termux_nethunter_install is for
-the downloaded minimal nethunter package<br> you'll to be online to do this settings fully
+the downloaded minimal nethunter package<br> you'll need to be online to do this settings
 
 
 this is a set of little scipts helping to install the minimal package of nethunter in termux<br>
