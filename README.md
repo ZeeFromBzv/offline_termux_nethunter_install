@@ -8,32 +8,32 @@ So, follow the steps bellow to install nethunter in termux
 1) open termux and make sure you are in the home directory
   #verify
 
-           pwd
+pwd
 
   #go to the home directory
 
-           cd ~
+cd ~
 
 2) install wget ; proot ; tar
 
-           apt update
-           apt install wget
-           apt install proot
-           apt install tar
+apt update
+apt install wget
+apt install proot
+apt install tar
 
 3) download a minimal nethunter image depending on your arch
 
   #to see the arch
 
-           uname -m
+uname -m
 
   #for armf
 
-           wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
+wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
   
   #for arm64
 
-           wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
+wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
 
   #unknown archs are not supported
 
@@ -41,66 +41,68 @@ So, follow the steps bellow to install nethunter in termux
 
   #download
 
-           wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/localinstall
+wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/localinstall
   
   #add permission
 
-           chmod +x localinstall
+chmod +x localinstall
 
 5) execute the localinstall script
 
-           ./localinstall
+./localinstall
 
 6) download the add_repos script and add permission
 
   #download
 
-            wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/add_repos
+wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/add_repos
 
   #add permission
 
-            chmod +x add_repos
+chmod +x add_repos
 
 7) execute the add_repos scrip
 
-            ./add_repos
+./add_repos
 
 8) start nethunter (it'll start as root)
 
-            nethunter
+nethunter
 
 or
 
-            nh
+nh
 
 9) install the repositories and update apt
 
-            apt install ./kali-archive-keyring_2020.2_all.deb && apt update
+apt install ./kali-archive-keyring_2020.2_all.deb && apt update
 
 10) install sudo
 
-            apt install sudo
+apt install sudo
 
 11) add kali user
 
-            adduser kali
+adduser kali
 
 11) add root and kali to the sudoers
 
-            echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers && echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
+echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers && echo "kali ALL=(ALL:ALL) ALL" > /etc/sudoers
 
 12) exit from nethunter
 
-            exit
+exit
 
 13) start nethunter (you should now be logged as kali)
 
-            nethunter
+nethunter
+
 or
-            nh
+
+nh
 
 14) install a desktop enviroment depending on your preferences and remove it's power manager plugins
 
 #gnome
 
-            sudo apt install install kali-desktop-gnome && sudo apt remove
+sudo apt install install kali-desktop-gnome && sudo apt remove
