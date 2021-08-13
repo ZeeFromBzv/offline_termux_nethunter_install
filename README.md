@@ -1,13 +1,12 @@
-#offline_termux_nethunter_install<br><br>WARNING: the offline in my offline_termux_nethunter_install is for
-the downloaded minimal nethunter package<br> you'll need to be online to do this settings
+#offline_termux_nethunter_install
 
-<br>
-user=kali (to log as custom user, you'll need to modify the login scripts)<br>
+WARNING: the offline innstallation is done by the script localinstall (for the minimal package) or localinstall_full (for the full package) after downloading it, you'll obviously need to be online to do the setups after the installation of your minimal or full package of nethunter.
 
 
+user=kali (to log as custom user, you'll need to modify the login scripts)
 
-this is a set of little scipts helping to install the minimal package of nethunter in termux<br>
-the instructions bellow help to install nethunter from it's minimal package (obvious)<br><br>
+this is a set of little scripts helping to install the minimal or full package of nethunter in termux
+depending on your will.
 
 So, follow the steps to install nethunter in termux...
 
@@ -17,7 +16,9 @@ So, follow the steps to install nethunter in termux...
 
      pwd
 
-  #go to the home directory
+you should see: /data/data/com.termux/files/home
+
+  #go to the home directory if you are not in /data/data/com.termux/files/home
 
      cd ~
 
@@ -25,7 +26,7 @@ So, follow the steps to install nethunter in termux...
 
 #update apt
 
-        apt update
+     apt update
 
 #install wget
 
@@ -40,35 +41,59 @@ So, follow the steps to install nethunter in termux...
      apt install tar
 
 
-3) download a minimal nethunter image depending on your arch
+3) download a minimal or full nethunter image depending on your arch
 
-  #verify your arch
+#verify your arch
 
-     uname -m
+    getprop ro.product.cpu.abi
 
-  #for armf
+#for armf (armeabi or armeabi-v7a)
 
-     wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
-  
-  #for arm64
+minimal
 
-     wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
+    wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz
 
-  #unknown archs are not supported
+full
 
-4) download the locallinstall script and add permission
+    wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-full.tar.xz
+
+#for arm64 (arm64-v8a)
+
+minimal
+
+    wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-minimal.tar.xz
+
+full
+
+    wget https://build.nethunter.com/kalifs/kalifs-latest/kalifs-arm64-full.tar.xz
+
+#unknown archs are not supported
+
+4) download the locallinstall or localinstall_full script and add permission
 
   #download
 
      wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/localinstall
+
+or
+    
+     wget https://raw.githubusercontent.com/ZeeFromBzv/offline_termux_nethunter_install/main/localinstall_full
   
   #add permission
 
      chmod +x localinstall
 
-5) execute the localinstall script
+or
+
+     chmod +x localinstall_full
+
+5) execute the localinstall or localinstall_full script
 
        ./localinstall
+
+or
+
+       ./locallinstall_full
 
 6) download the add_repos script and add permission
 
@@ -96,7 +121,13 @@ or
 
 9) install the repositories and update apt
 
-        apt install ./kali-archive-keyring_2020.2_all.deb && apt update
+install
+
+        apt install ./kali-archive-keyring_2020.2_all.deb
+
+update
+
+        apt update
 
 10) install sudo
 
@@ -139,3 +170,48 @@ or
 and
 
      sudo apt-get remove gnome-power-manager
+
+#xcfe
+
+     sudo apt install kali-desktop-xfce
+
+and
+
+     sudo apt-get remove xfce-power-manager-plugins
+
+#install tightvncserver
+
+     sudo apt install tightvncserver
+
+#start a vnc session, for the first time, it'll ask you to enter a password, this password will be your vnc password so, don't forget it and dont use a weak password
+
+     tightvncserver -geometry (x)x(y)
+
+(x)x(y) will be replaced by the resolution of your screen eg: 2220x1080
+
+#you can also start a vnc session with tightvncserver's default resolution
+
+     tightvncservser
+
+#now, you have kali nethunter installed in your termux, so... enjoy !
+
+# to login in nethunter
+
+use
+     nethunter
+
+or
+
+     nh
+
+#to logout, use
+     
+     exit
+
+#to start a vnc session in nethunter
+
+    tightvncserver -geometry (x)x(y)
+
+or
+
+     tightvncserver
