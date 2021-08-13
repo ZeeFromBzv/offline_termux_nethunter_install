@@ -182,7 +182,7 @@ and
      sudo apt-get rmove kde-power-manager
 
 
-#install tightvncserver
+15) install tightvncserver
 
      sudo apt install tightvncserver
 
