@@ -141,7 +141,7 @@ update
 
 #add root
 
-     echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers 
+     echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers
 
 #add kali
 
