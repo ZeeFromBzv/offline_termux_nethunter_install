@@ -156,7 +156,7 @@ or
 
       nh
 
-14) install a desktop enviroment depending on your preferences and remove it's power manager plugins
+14) install a desktop enviroment depending on your preferences and remove it's power manager plugins (choose one and install it)
 
 #gnome
 
@@ -173,6 +173,14 @@ and
 and
 
      sudo apt-get remove xfce-power-manager-plugins
+
+#kde
+     sudo apt install kali-desktop-kde
+
+and
+
+     sudo apt-get rmove kde-power-manager
+
 
 #install tightvncserver
 
