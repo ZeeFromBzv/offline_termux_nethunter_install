@@ -1,0 +1,22 @@
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+function get_arch() {
+    case $(getprop ro.product.cpu.abi) in
+        arm64-v8a)
+            SYS_ARCH=arm64
+	    echo "your system's arch is $SYS_ARCH"
+            ;;
+        armeabi|armeabi-v7a)
+            SYS_ARCH=armhf
+	    echo "your system's arch is $SYS_ARCH"
+            ;;
+        *)
+            unsupported_arch
+	    echo "your system's arch is unsuported"
+            ;;
+    esac
+}
+
+get_arch
+
+##echo "your system's arch is: $SYS_ARCH"
