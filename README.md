@@ -12,7 +12,9 @@ So, follow the steps to install nethunter in termux...
 
 1) open termux and make sure you are in the home directory
 
-  #verify: 'pwd'
+  #verify: 
+
+     pwd
 
 you should see: /data/data/com.termux/files/home
 
