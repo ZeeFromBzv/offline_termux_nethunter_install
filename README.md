@@ -183,6 +183,25 @@ and
 
      tightvncservser
 
+# If your vnc-session display is a gray screen with x cursor, follow the steps bellow
+
+#stop the vnc-session
+
+     tightvncserver -kill :n
+
+replace "n" by the session number (default: n=1)
+
+#open the vnc startup file with nano to edit it
+
+     nano ~/.vnc/xstartup
+
+delete the text and replace it by : `#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+startxfce4 &`
+
+
+
 #now, you have kali nethunter installed in your termux, so... enjoy !
 
 # to login in nethunter
