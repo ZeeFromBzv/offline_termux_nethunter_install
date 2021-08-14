@@ -195,10 +195,15 @@ replace "n" by the session number (default: n=1)
 
      nano ~/.vnc/xstartup
 
-delete the text and replace it by : `#!/bin/sh
+delete the text and replace it by :
+```
+
+#!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
-startxfce4 &`
+startxfce4 &
+
+```
 
 
 
