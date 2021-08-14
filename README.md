@@ -10,17 +10,19 @@ depending on your will.
 
 So, follow the steps to install nethunter in termux...
 
-1) open termux and make sure you are in the home directory
+
+
+1) open termux and make sure you are in the home directory and then setup the storage
 
   #verify: 
 
      pwd
 
-you should see: /data/data/com.termux/files/home
+you should see: /data/data/com.termux/files/home ; if you see something else, type: `cd ~`
 
-  #go to the home directory if you are not in /data/data/com.termux/files/home
+  #setup the storage
 
-     cd ~
+     termux-setup-storage
 
 2) install wget ; proot ; tar
 
@@ -166,13 +168,6 @@ and
 
      sudo apt-get remove xfce4-power-manager-plugins
 
-#kde
-     sudo apt install kali-desktop-kde
-
-and
-
-     sudo apt-get rmove kde-power-manager
-
 
 15) install tightvncserver
 
@@ -199,11 +194,11 @@ or
 
      nh
 
-#to logout, use
+# to logout, use
      
      exit
 
-#to start a vnc session in nethunter
+# to start a vnc session in nethunter
 
     tightvncserver -geometry (x)x(y)
 
