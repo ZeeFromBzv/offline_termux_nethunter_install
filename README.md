@@ -12,9 +12,7 @@ So, follow the steps to install nethunter in termux...
 
 1) open termux and make sure you are in the home directory
 
-  #verify
-
-     pwd
+  #verify: 'pwd'
 
 you should see: /data/data/com.termux/files/home
 
@@ -156,23 +154,15 @@ or
 
       nh
 
-14) install a desktop enviroment depending on your preferences and remove it's power manager plugins (choose one and install it)
+14) install xcfe4 and remove it's power manager plugis
 
-#gnome
+by
 
-     sudo apt install kali-desktop-gnome
-
-and
-
-     sudo apt-get remove gnome-power-manager
-
-#xcfe
-
-     sudo apt install kali-desktop-xfce
+    sudo apt install kali-desktop-xfce
 
 and
 
-     sudo apt-get remove xfce-power-manager-plugins
+     sudo apt-get remove xfce4-power-manager-plugins
 
 #kde
      sudo apt install kali-desktop-kde
@@ -218,3 +208,5 @@ or
 or
 
      tightvncserver
+
+
