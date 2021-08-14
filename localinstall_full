@@ -72,6 +72,7 @@ cmdline="proot \\
         -r $CHROOT \\
         -b /dev \\
         -b /proc \\
+        -b storage/shared/:/sdcard \\
         -b $CHROOT\$home:/dev/shm \\
         -w \$home \\
            /usr/bin/env -i \\
