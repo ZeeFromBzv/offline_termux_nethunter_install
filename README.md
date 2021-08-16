@@ -141,8 +141,11 @@ update
 
 11) add root and kali to the sudoers
 
-        echo "root ALL=(ALL:ALL) ALL 
+
+```
+echo "root ALL=(ALL:ALL) ALL 
 kali ALL=(ALL:ALL) ALL" > /etc/sudoers
+```
 
 12) exit from nethunter
 
